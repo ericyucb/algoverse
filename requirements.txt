@@ -1,0 +1,14 @@
+# Pinned per project notes — LLaDA's modeling code was validated against these.
+torch==2.5.1
+transformers==4.46.2
+accelerate>=0.34.0
+bitsandbytes>=0.43.0   # only needed for T4 4-bit weight-loading smoke tests;
+                        # the real experiments quantize the KV cache, not weights
+datasets>=2.20.0        # use streaming=True — see shared-disk rule in README
+numpy>=1.26.0
+tqdm>=4.66.0
+sentencepiece>=0.2.0
+huggingface_hub>=0.24.0
+
+# NOT installed: torchvision — causes import conflicts, unused by this project.
+# If it's present in the environment already, setup.sh uninstalls it.

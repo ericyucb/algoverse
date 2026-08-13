@@ -1,0 +1,10 @@
+external/
+__pycache__/
+*.pyc
+.venv/
+outputs/
+checkpoints/
+*.ckpt
+wandb/
+.ipynb_checkpoints/
+*.log
